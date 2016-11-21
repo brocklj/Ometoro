@@ -3,6 +3,6 @@ class PagesController < ApplicationController
 
   end
   def create
-    
+    render plain: params[:page].inspect
   end
 end
