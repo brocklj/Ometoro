@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+  def index
+    @pages = Page.all
+  end
   def show
     @page = Page.find(params[:id])
   end
@@ -8,7 +11,7 @@ class PagesController < ApplicationController
   def create
     @page = Page.new(page_params)
     @page.save
-    redirect_to @page
+    redirect_to pages_path
   end
 end
 

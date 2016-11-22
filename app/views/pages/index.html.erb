@@ -1,0 +1,15 @@
+<h1>List of pages</h1>
+<%= link_to 'New page', new_page_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <% @pages.each do |page| %>
+      <tr>
+        <td><%= page.title %></td>
+        <td><%= page.test %></td>
+      </tr>
+  <% end %>
+</table>
