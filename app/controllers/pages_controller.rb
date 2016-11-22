@@ -3,6 +3,8 @@ class PagesController < ApplicationController
 
   end
   def create
-    render plain: params[:page].inspect
+    @page = Page.new(params[:page])
+    @page.save
+    redirect_to @page
   end
 end
