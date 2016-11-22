@@ -10,12 +10,15 @@ class PagesController < ApplicationController
   end
   def create
     @page = Page.new(page_params)
-    @page.save
+    if @page.save
     redirect_to pages_path
+    else
+      render 'new'
+    end
   end
 end
 
 private
 def page_params
-  params.require(:page).permit(:title, :test)
+  params.require(:page).permit(:title, :text)
 end
