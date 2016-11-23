@@ -12,6 +12,8 @@
         <td><%= page.text %></td>
         <td><%= link_to 'Show', page_path(page) %></td>
         <td><%= link_to 'Edit', edit_page_path(page) %></td>
+        <td><%= link_to 'Delete', page_path(page), method: :delete, data: { confirm: "Sure?"} %></td>
+
       </tr>
   <% end %>
 </table>
