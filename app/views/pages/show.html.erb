@@ -7,18 +7,29 @@
   <strong>Text:</strong>
   <%= @page.text %>
 </p>
+<% Page.all.each do |page| %>
+
+
+
+    <%= link_to page.title, page_path(page) %><br>
+
+
+
+<% end %>
 
 <p>
   <strong>
     <h2>Courses</h2>
     <% @page.courses.each do |course| %>
-    <p>
+
 
       <%= course.id %>
-      <%= course.Name %>
-    </p>
+      <%= link_to course.Name, page_course_path(@page,course) %><br>
+
+
+
 <% end %>
   </strong>
 </p>
-<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Edit', edit_page_path(@page) %>
 <%= link_to 'Back', pages_path %>
