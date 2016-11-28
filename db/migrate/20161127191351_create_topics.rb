@@ -7,7 +7,7 @@ class CreateTopics < ActiveRecord::Migration
 
       t.timestamps null: false
     end
- 
+
     create_table :topics_courses, id: false do |t|
       t.belongs_to :topic, index: true
       t.belongs_to :course, index: true

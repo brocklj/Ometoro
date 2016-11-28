@@ -1,19 +1,72 @@
-<h1>List of pages</h1>
-<%= link_to 'New page', new_page_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
+<%= render 'menu' %>
+<section>
+  <div class="row">
+    <div class="rec rec-big">
+      <article>
+        <h2>Omentoro</h2>
+        <p>Služba Omentoro poskytuje dobré zázemí v předávání znalostí a jejich získávání. Nabízí sledování
+          tvého postupu v lekcích mentory, ti ho vyhodnotí a zodpoví dotazy pří online či face2face
+          konzultacích.
+          <!--<img src="./img/28102-NWXVXP.jpg"> -->
+        </p>
+      </article>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="circle">
 
-  <% @pages.each do |page| %>
-      <tr>
-        <td><%= page.title %></td>
-        <td><%= page.text %></td>
-        <td><%= link_to 'Show', page_path(page) %></td>
-        <td><%= link_to 'Edit', edit_page_path(page) %></td>
-        <td><%= link_to 'Delete', page_path(page), method: :delete, data: { confirm: "Sure?"} %></td>
+        <img src="/img/9_learning-01.jpg" alt="Learn">
+      </div>
 
-      </tr>
-  <% end %>
-</table>
+      <div class="rec rec-below-circle">
+        <h3>Nauč se a získej XP pointy</h3>
+        <p>Výklad je přehledně sktrukturován, doplněn průběžné znalostní kvízy a ty porovnávej. To vše bude aby.
+          aby učení bylo hrou a novou výzvou.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="circle">
+        <img src="/img/idea08.jpg" alt="Create">
+      </div>
+      <div class="rec rec-below-circle">
+        <h3>Vytvářej</h3>
+        <p>Staň se i ty součástí obsahu. A předej své zkušenosti ostatním. Mentoruj, a sleduj postup svých
+          studentů.
+        </p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="circle">
+        <img src="/img/7_150.jpg" alt="Share">
+      </div>
+      <div class="rec rec-below-circle">
+        <h3>Sdílej se</h3>
+        <p>Sdílej svoji zkušenost se svým mentorem, nebo všichni mentoři mezi sebou.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="rec rec-small" style="display: block;">
+      <p><strong>Zůstaň ve spojení</strong></p>
+    </div>
+  </div>
+  <div class="row  row-bottom">
+
+    <div class="circle">
+      <a href="/pridej-se.html">
+        <h2 class="active">Přidej se</h2>
+      </a>
+    </div>
+    <div class="circle">
+      <a href="#">
+        <h2>Facebook</h2>
+      </a>
+    </div>
+    <div class="circle">
+      <a href="/omentoro-metoda.html">
+        <h2>Naše metoda</h2>
+      </a>
+    </div>
+  </div>
+</section>
