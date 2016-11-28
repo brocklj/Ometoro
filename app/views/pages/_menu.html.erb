@@ -2,7 +2,7 @@
 <aside>
   <img src="/logo.png" alt="Omentoro logo">
   <nav>
-    <a href="./">Domů</a>
+    <a href="/">Domů</a>
     <% Page.all.each do |page| %>
 
         <%= link_to page.title, page_path(page) %>

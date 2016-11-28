@@ -12,4 +12,4 @@ vyučujících. Účastníci se do kurzu přihlašují (zapisují) a na závěr 
  podrobují zkoušce a mohou získat nějaké osvědčení. Kurzy mohou být prezenční,
 kde se předpokládá pravidelná účast posluchačů, anebo dálkové či e-learningové, kde
 účastníci dostávají různé studijní materiály a úkoly, studují doma ve volném čase, konzultují písemně a nakonec případně skládají zkoušku. zdroj wikipedia" }, { title: 'Kurzy2' }])
-courses = Course.create([{ Name: 'Zaklady1', page_id: 1 }, { Name: 'Zaklady1', page_id: 2 },{ name: 'Zaklady3', page_id: 1 }])
+courses = Course.create([{ id: 1, Name: 'Zaklady1', page_id: 1 }, { id: 2, Name: 'Zaklady2', page_id: 2 },{ id: 3, name: 'Zaklady3', page_id: 1 },{id: 3, name: 'Zaklady4', page_id: 1 }])
