@@ -1,2 +1,27 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<%= render 'menu' %>
+<section>
+  <div class="rec dash-big">
+
+  <%= link_to 'New page', new_page_path %>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+    </tr>
+
+    <% @pages.each do |page| %>
+        <tr>
+          <td><%= page.title %></td>
+          <td><%= page.text %></td>
+          <td><%= link_to 'Show', page_path(page) %></td>
+          <td><%= link_to 'Edit', edit_page_path(page) %></td>
+          <td><%= link_to 'Delete', page_path(page), method: :delete, data: { confirm: "Sure?"} %></td>
+
+        </tr>
+
+    <% end %>
+    </table>
+
+  </div>
+
+</section>

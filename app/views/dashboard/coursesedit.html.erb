@@ -1,0 +1,29 @@
+<%= render 'menu' %>
+<section>
+
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+    </tr>
+
+    <% @pages.each do |page| %>
+        <tr>
+          <td><%= page.title %></td>
+          <td><%= page.id %></td>
+          <td><%= link_to 'Create a New Course', new_page_course_path(page) %></td>
+
+          <% page.courses.each do |course| %>
+            <tr>
+          <td><%= course.Name %></td>
+          <td><%= link_to 'Show', page_course_path(page,course) %></td>
+          <td><%= link_to 'Edit', edit_page_course_path(page,course) %></td>
+          <td><%= link_to 'Delete', page_course_path(page,course), method: :delete, data: { confirm: "Sure?"} %></td>
+            </tr>
+          <% end %>
+
+        </tr>
+    <% end %>
+  </table>
+  <%= Topic.all %>
+</section>

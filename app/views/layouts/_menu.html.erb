@@ -1,0 +1,14 @@
+
+<aside>
+  <img src="/logo.png" alt="Omentoro logo">
+  <nav>
+    <%= link_to "Domu", root_url %>
+    <% Page.all.each do |page| %>
+
+        <%= link_to page.title, page_path(page)%>
+
+    <% end %>
+  </nav>
+
+  <%= link_to 'Admin', dashboard_path, class: "dashboard" %>
+</aside>

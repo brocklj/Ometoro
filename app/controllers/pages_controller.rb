@@ -27,7 +27,7 @@ class PagesController < ApplicationController
   def create
     @page = Page.new(page_params)
     if @page.save
-    redirect_to pages_path
+    redirect_to dashboard_path
     else
       render 'new'
     end
@@ -37,7 +37,7 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
     @page.destroy
 
-    redirect_to pages_path
+    redirect_to dashboard_path
   end
   private
   def page_params

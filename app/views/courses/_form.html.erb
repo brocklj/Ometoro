@@ -1,0 +1,13 @@
+<%= form_for([@page, @page.courses.new]) do |f| %>
+
+    <p>
+      <%= f.label :Name %><br>
+      <%= f.text_field :Name %>
+    </p>
+
+
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
