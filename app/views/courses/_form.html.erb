@@ -1,8 +1,9 @@
-<%= form_for([@page, @page.courses.new]) do |f| %>
+<%= simple_form_for([@page, @course]) do |f| %>
 
     <p>
       <%= f.label :Name %><br>
       <%= f.text_field :Name %>
+      <%= f.association :tags, as: :check_boxes %>
     </p>
 
 

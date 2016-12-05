@@ -5,6 +5,13 @@
       <article>
         <h2><%= @course.Name %></h2>
         <p>
+          <% if @course.tags.any? %>
+            <ul>
+              <% @course.tags.each do |tag| %>
+                  <li><%= tag.name %></li>
+              <% end %>
+            </ul>
+        <% end %>
         </p>
       </article>
     </div>

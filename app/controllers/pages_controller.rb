@@ -24,6 +24,7 @@ class PagesController < ApplicationController
       render 'edit'
     end
   end
+
   def create
     @page = Page.new(page_params)
     if @page.save
