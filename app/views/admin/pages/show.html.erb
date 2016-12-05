@@ -1,0 +1,52 @@
+<%= render 'layouts/menu' %>
+<section>
+  <div class="row">
+    <div class="rec rec-big">
+      <article>
+        <h2><%= @page.title %></h2>
+        <p> <%= @page.text %>
+
+        </p>
+        <%= link_to 'Edit', edit_page_path(@page) %>
+      </article>
+    </div>
+  </div>
+  <div class="row">
+    <% @page.courses.each do |course| %>
+        <div class="col">
+
+          <div class="circle">
+            <h2>
+              <%= link_to course.Name, page_course_path(@page, course) %>
+            </h2>
+          </div>
+        </div>
+
+    <% end %>
+
+
+    <div class="row">
+      <div class="rec rec-small" style="display: block;">
+        <p><strong>Zůstaň ve spojení</strong></p>
+      </div>
+    </div>
+    <div class="row  row-bottom">
+
+      <div class="circle">
+        <a href="./pridej-se.html">
+          <h2 class="active">Přidej se</h2>
+        </a>
+      </div>
+      <div class="circle">
+        <a href="#">
+          <h2>Facebook</h2>
+        </a>
+      </div>
+      <div class="circle">
+        <a href="./omentoro-metoda.html">
+          <h2>Naše metoda</h2>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

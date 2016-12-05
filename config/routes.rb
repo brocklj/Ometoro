@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
-  #get 'admin' => 'dashboard#index'
-  scope 'admin' do
-    get '/' => 'dashboard#index', as: 'dashboard'
+  get 'admin' => 'admin/dashboard#index'
+  namespace :admin do
+    resources :pages, :courses
+    resources :pages do
+      resources :courses do
+      end
+    end
   end
   get 'dashboard/coursesedit'
   get 'welcome/index'
 
   resources :pages do
     resources :courses do
-      resources :topics
     end
   end
 

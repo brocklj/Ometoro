@@ -1,0 +1,14 @@
+<%= simple_form_for([:admin,@page, @course]) do |f| %>
+
+    <p>
+      <%= f.label :Name %><br>
+      <%= f.text_field :Name %>
+      <%= f.association :tags, as: :check_boxes %>
+    </p>
+
+
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
