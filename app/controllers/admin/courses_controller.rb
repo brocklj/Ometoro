@@ -44,6 +44,6 @@ class Admin::CoursesController < ApplicationController
 
   private
   def course_params
-    params.require(:course).permit(:Name, :tag_ids => [])
+    params.require(:course).permit(:Name, :body, :tag_ids => [])
   end
 end

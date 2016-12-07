@@ -3,8 +3,13 @@
     <p>
       <%= f.label :Name %><br>
       <%= f.text_field :Name %>
-      <%= f.association :tags, as: :check_boxes %>
     </p>
+    <p>
+      <%= f.label :body %><br>
+      <%= f.text_area :body %>
+    </p>
+      <%= f.association :tags, as: :check_boxes %>
+
 
 
 

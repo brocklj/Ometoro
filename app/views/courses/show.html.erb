@@ -3,8 +3,9 @@
   <div class="row">
     <div class="rec rec-big">
       <article>
-        <h2><%= @course.Name %></h2>
+        <h1><%= @course.Name %></h1>
         <p>
+          <%= @course.body %>
           <% if @course.tags.any? %>
             <ul>
               <% @course.tags.each do |tag| %>
