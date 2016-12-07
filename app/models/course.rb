@@ -1,12 +1,13 @@
 # == Schema Information
 #
-# Table name: coursesedit
+# Table name: courses
 #
 #  id         :integer          not null, primary key
 #  Name       :string
 #  page_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  body       :text
 #
 
 class Course < ActiveRecord::Base

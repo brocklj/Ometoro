@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'admin' => 'admin/dashboard#index'
   namespace :admin do
-    resources :pages, :courses
+    resources :pages, :courses, :tags
     resources :pages do
       resources :courses do
       end
