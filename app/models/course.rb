@@ -14,4 +14,6 @@ class Course < ActiveRecord::Base
   belongs_to :page
   has_many :tag_assigments
   has_many :tags, through: :tag_assigments
+  validates :Name, presence: true
+  validates :body, presence: true
 end

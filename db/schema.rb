@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161207080520) do
+ActiveRecord::Schema.define(version: 20161208194629) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "Name"
@@ -23,12 +23,8 @@ ActiveRecord::Schema.define(version: 20161207080520) do
 
   add_index "courses", ["page_id"], name: "index_courses_on_page_id"
 
-  create_table "pages", force: :cascade do |t|
-    t.string   "title"
-    t.text     "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+# Could not dump table "pages" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "tag_assigments", force: :cascade do |t|
     t.integer  "tag_id"

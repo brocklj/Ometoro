@@ -3,7 +3,7 @@
   <img src="/logo.png" alt="Omentoro logo">
   <nav>
     <%= link_to "Domu", root_url %>
-    <% Page.all.each do |page| %>
+    <% get_visible_pages.each do |page| %>
 
         <%= link_to page.title, page_path(page), class: ('active' if request.path == page_path(page))%>
 

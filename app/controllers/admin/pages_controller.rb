@@ -43,7 +43,7 @@ class Admin::PagesController < ApplicationController
   end
   private
   def page_params
-    params.require(:page).permit(:title, :text)
+    params.require(:page).permit(:title, :text, :visible)
   end
 end
 
