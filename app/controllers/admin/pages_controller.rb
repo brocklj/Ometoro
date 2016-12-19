@@ -1,5 +1,5 @@
 class Admin::PagesController < ApplicationController
-  http_basic_authenticate_with name: "jakub", password: "jakub"
+  http_basic_authenticate_with name: "admin", password: "admin"
   def index
     @pages = Page.all
   end
@@ -20,7 +20,7 @@ class Admin::PagesController < ApplicationController
     @page = Page.find(params[:id])
 
     if @page.update(page_params)
-      redirect_to @page
+      redirect_to admin_pages_path
     else
       render 'edit'
     end

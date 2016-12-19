@@ -1,18 +1,24 @@
 <%= render 'admin/menu' %>
 <section>
-  <div class="rec dash-big">
+  <div class="rec rec-big">
 
-  <%= link_to 'New page', new_admin_page_path %>
+
   <table>
     <tr>
       <th>Title</th>
       <th>Text</th>
+      <th>Visibility</th>
+      <th>Created at</th>
+      <th>Updated at</th>
     </tr>
 
     <% @pages.each do |page| %>
         <tr>
           <td><%= page.title %></td>
           <td><%= page.text %></td>
+          <td><%= page.visible == 1 ? "visible" : "hidden" %></td>
+          <td><small><%= page.created_at %></small></td>
+          <td><small><%= page.updated_at %></small></td>
           <td><%= link_to 'Show', page_path(page) %></td>
           <td><%= link_to 'Edit', edit_admin_page_path(page) %></td>
           <td><%= link_to 'Delete', admin_page_path(page), method: :delete, data: { confirm: "Sure?"} %></td>
@@ -21,6 +27,7 @@
 
     <% end %>
     </table>
+    <%= link_to 'Create New page', new_admin_page_path %>
 
   </div>
 

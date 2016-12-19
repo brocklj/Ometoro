@@ -19,7 +19,7 @@ header, section, footer, aside, nav, main, article, figure {
 
 }
 h1,h2 {
-	color: darkblue;
+	color: blue;
 }
 h3 {
 	color: blue; 
@@ -37,6 +37,7 @@ header {
 
 a {
     color: darkblue;
+    text-decoration: none;
 }
 
 header h1 {
@@ -192,11 +193,18 @@ margin-bottom: 1em;
 
 	
 }
+.rec a{
+    text-align: left;
+    padding: 1em;
+
+
+}
 
 .rec-big {
 	width: 80%;
 	display: inline-table;
 	height: 100%;
+    padding: 1em;
 }
 .rec-big img {
 	margin: 0.9%;
@@ -209,6 +217,10 @@ margin-bottom: 1em;
 .rec-big span {
 	vertical-align: top;
 	display: inline-table;
+
+}
+.rec-big table {
+  width: 100%;
 
 }
 

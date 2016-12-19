@@ -1,4 +1,14 @@
-
+<%= render 'admin/menu' %>
 <section>
+  <div class="row rec-big" style="text-align: left;">
+  <table>
+
+  <% @tags.each do |tag| %>
+        <tr><td><%= tag.name %> <%= link_to 'delete', admin_tag_path(tag), method: :delete, data: { confirm: 'Sure?'}  %></td></tr>
+    <% end %>
+
+  </table>
+  </div>
+  <h1>Add a New Tag</h1>
   <%= render 'form' %>
 </section>

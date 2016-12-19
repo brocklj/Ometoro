@@ -1,4 +1,6 @@
 <%= simple_form_for([:admin,@tag]) do |f| %>
+    <%= f.hidden_field :page_id, :value => params[:page_id] %>
+    <%= f.hidden_field :course_id, :value => params[:course_id] %>
 
     <p>
       <%= f.label :name %><br>

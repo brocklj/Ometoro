@@ -12,7 +12,7 @@
       <%= f.association :page %>
     </p>
       <%= f.association :tags, as: :check_boxes %>
-    <%= link_to 'Add Tag', new_admin_tag_path %>
+    <%= link_to 'Add Tag', new_admin_tag_path(page_id:@page, course_id:@course) %>
 
 
 
