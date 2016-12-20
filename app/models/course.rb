@@ -15,5 +15,6 @@ class Course < ActiveRecord::Base
   has_many :tag_assigments
   has_many :tags, through: :tag_assigments
   validates :Name, presence: true
-  validates :body, presence: true
+  validates :body, presence: false
+  validates_associated :tags
 end
