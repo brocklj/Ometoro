@@ -11,8 +11,9 @@
     <div class="field"></div>
       <%= f.association :page %>
     </p>
+    <%= f.label :tag %>
       <%= f.association :tags, as: :check_boxes %>
-    <%= link_to 'Add Tag', new_admin_tag_path(page_id:@page, course_id:@course) %>
+    <%= link_to 'Add/Edit Tags', new_admin_tag_path(page_id:@page, course_id:@course) %>
 
 
 
