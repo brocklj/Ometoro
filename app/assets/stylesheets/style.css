@@ -323,5 +323,8 @@ aside nav a:hover, aside nav .active {
 
 
 }
-
+.tags {
+    float: left;
+    text-align: left;
+}
 

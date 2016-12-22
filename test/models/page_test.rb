@@ -7,6 +7,7 @@
 #  text       :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  visible    :boolean
 #
 
 require 'test_helper'

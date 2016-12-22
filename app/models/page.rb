@@ -22,6 +22,9 @@ class Page < ActiveRecord::Base
 
 
   def default_values
-    self.text ||= "Default Text stranky"
+    if self.text == ""
+    self.text = "Default text = insert a content."
+    end
+
   end
 end

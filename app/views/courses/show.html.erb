@@ -7,11 +7,14 @@
         <p>
           <%= @course.body %>
           <% if @course.tags.any? %>
+            <div class="tags">
+            <h3>Tags:</h3>
             <ul>
               <% @course.tags.each do |tag| %>
                   <li><%= tag.name %></li>
               <% end %>
             </ul>
+            </div>
         <% end %>
         </p>
       </article>

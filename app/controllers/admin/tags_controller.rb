@@ -1,5 +1,11 @@
 class Admin::TagsController < ApplicationController
   http_basic_authenticate_with name: "admin", password: "admin"
+  def index
+    @tag = Tag.new
+    @tags = Tag.all
+  end
+
+
   def new
     @tag = Tag.new
     @tags = Tag.all
@@ -8,13 +14,16 @@ class Admin::TagsController < ApplicationController
   def create
     @tag = Tag.new(tag_params)
     if @tag.save
-      if params[:tag][:course_id] == nil
+      if params[:tag][:page_id] != ""
         redirect_to edit_admin_page_course_path(params[:tag][:page_id], params[:tag][:course_id])
+      elsif params[:tag][:page_id] != ""
+        redirect_to new_admin_page_course_path(params[:tag][:page_id])
+        else
+          redirect_to admin_courses_path
       end
-      redirect_to new_admin_page_course_path(params[:tag][:page_id])
+
     else
-      render 'new'
-      redirect_to :back
+      render 'admin/courses/new'
     end
   end
 
